@@ -1,0 +1,62 @@
+/* ITEM FUNCTIONS */
+.item-function {
+	min-width: 4.78rem;
+	align-self: stretch;
+
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	cursor: pointer;
+
+	&:hover { background-color: #eee; }
+
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+
+	user-select: none;
+}
+
+/* LINK */ .item-link {
+	margin-left: auto;
+	border-left: 1px dashed black;
+
+	color: black;
+	text-decoration: none;
+}
+
+/* EDIT, REMOVE */ .edit-item, .remove-item {	
+	margin-left: auto;
+
+	font-variation-settings: 
+		'FILL' 0,
+		'wght' 400,
+		'GRAD' 100,
+		'opsz' 48;
+}
+	/* EDIT ITEM */
+	.edit-item {
+		background: #eee;
+
+		border-left: 1px dashed black;
+
+		&:hover,
+		&:active {
+			background-color: #ddd;
+		}
+	}
+
+	/* REMOVE ITEM */
+	.remove-item {
+		background-color: #333;
+		color: white;
+
+		&:hover,
+		&:active {
+			background-color: #222;
+		}
+	}

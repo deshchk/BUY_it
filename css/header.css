@@ -1,0 +1,149 @@
+/* HEADER */
+header {
+	max-width: calc(60ch + 2rem);
+	max-height: 108px;
+
+	position: fixed;
+	inset: 0;
+	margin-inline: auto;
+
+	display: flex;
+	flex-direction: column;
+	gap: .7rem 0;
+
+	background: #ffffff;
+
+	padding-top: 1rem;
+	padding-inline: 1rem;
+	z-index: 1;
+
+	user-select: none;
+}
+
+	/* TITLE AND ADD BUTTONS */
+	header .title-and-buttons {
+		height: 44px;
+
+		display: flex;
+		gap: .5rem;
+	}
+
+		/* TITLE */
+		header h1 {
+			/* reset */
+			margin: 0;
+
+			/* rest */
+			width: fit-content;
+
+			font-size: 1.5rem;
+			line-height: 1.22;
+			
+			letter-spacing: 1px;
+			color: white;
+			background-color: var(--black);
+
+			padding: .5rem 1rem;
+		}
+
+		/* BUTTONS */
+		header button#add-item,
+		header button#help {
+			height: 100%;
+			width: 44px;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+			background: white;
+
+			border-radius: 0;
+
+			cursor: pointer;
+		}
+
+			header button#add-item {
+				border: 1px solid black;
+
+				&:hover,
+				&:focus,
+				&:active {
+					background-color: var(--black);
+					color: white;
+					outline: none;
+				}
+			}
+
+			header button#help {
+				border: 1px dashed #aaa;
+				margin-left: auto;
+				color: #888;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: black;
+					border: 1px solid black;
+					outline: none;
+				}
+			}
+
+	/* TAG AND FILTERS */
+	header .tag-and-filters {
+		max-height: 1.8rem;
+
+		flex: 1;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: .8rem;
+
+		background: #f6f6f6;
+
+		padding-inline: .3rem;
+	}
+
+		/* TAG */
+		#current-tag {
+			display: inline-block;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			
+			padding-block: .3rem .2rem;
+
+			cursor: pointer;
+
+			&::before {
+				content: '#';
+				color: #aaa;
+			}
+		}
+
+		/* SELECTS */
+		header select {
+			background-position: 92% 48%;
+
+			border: none;
+			border-radius: 0;
+
+			padding-block: .3rem .2rem;
+
+			cursor: pointer;
+
+			&:hover,
+			&:focus,
+			&:active {
+				outline: none;
+
+				&:invalid {
+					color: black;
+				}
+			}
+		}
+
+		select#filter-check {
+			margin-left: auto;
+			padding-right: 1.4rem !important;
+		}

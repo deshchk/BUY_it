@@ -1,0 +1,134 @@
+/* ITEM */
+.list-item {
+	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
+
+	border: 1px dashed black;
+	&:not(:first-of-type) {
+		margin-top: -1px;
+	}
+
+	&:hover,
+	&:active {
+		border: 1px solid black;
+	}
+}
+
+	/* SEE MAIN */
+	.see-item {
+		position: relative;
+		min-width: 100%;
+
+		display: flex;
+	}
+
+		/* ALL ABOUT */
+		.item-about {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			gap: .5rem;
+
+			padding: .65em;
+		}
+
+			/* NAME and AMOUNT */
+			.item-name-and-amount {
+				width: fit-content;
+				background: #f3f3f3;
+				padding-inline: .4rem .5rem;
+				padding-block: .25rem .2rem;
+			}
+
+			/* AMOUNT */
+			.item-amount {
+				&::before {
+					content: 'x';
+					color: #aaa;
+
+					margin-inline: .2rem .1rem;
+				}
+			}
+
+			/* NOTE */
+			.item-note {
+				font-weight: 300;
+				margin: .1rem 0 0 .1rem;
+			}
+
+			/* TAG */
+			.item-tag {
+				max-width: fit-content;
+
+				opacity: .4;
+				transition: opacity .15s;
+
+				cursor: pointer;
+
+				&:hover,
+				&:active {
+					opacity: 1;
+				}
+
+				&::before {
+					content: '#';
+					color: #999;
+				}
+			}
+
+
+
+/* PRIORITIES */
+.priority-2 {
+	background: #ddd;
+
+	&::before {
+		background-color: #666;
+	}
+}
+
+.priority-3 {
+	color: white;
+	background: var(--black);
+	
+	&::before {
+		background-color: white;
+	}
+
+	& span::before {
+		color: #aaa;
+	}
+}
+
+.priority-2::before,
+.priority-3::before {
+	display: inline-block;
+	content: '';
+
+	width: .35rem;
+	height: .35rem;
+
+	position: relative;
+	bottom: .13rem;
+
+	border-radius: 50%;
+
+	margin-inline: .1rem .15rem;
+}
+
+
+.checked {
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+
+		background: repeating-linear-gradient(-45deg,
+		transparent 0 4px,
+		#00000033 5px,
+		transparent 6px 10px);
+	}
+}

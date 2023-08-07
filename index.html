@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>BUY_it – Shopping List App</title>
+	<meta name="description" content="Outsource remembering things to buy." />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="theme-color" content="#ffffff" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@deshchkowo" />
+	<meta name="twitter:url" content="https://buy.deszczak.work" />
+	<meta name="twitter:title" content="BUY_it – Shopping List App" />
+	<meta name="twitter:description" content="Outsource remembering things to buy." />
+	<meta name="twitter:image" content="https://buy.deszczak.work/social.png" />
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="BUY_it – Shopping List App" />
+	<meta property="og:description" content="Outsource remembering things to buy." />
+	<meta property="og:site_name" content="BUY_it" />
+	<meta property="og:url" content="https://buy.deszczak.work" />
+	<meta property="og:image" content="https://buy.deszczak.work/social.png" />
+	<!-- NORMALIZE -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+	<!-- GOOGLE'S: Roboto and Icons -->
+	<link rel="stylesheet" href="./css/google.css">
+	<!-- Segmented styles for better performance -->
+	<link rel="stylesheet" href="global.css">
+	<link rel="stylesheet" href="./css/utility.css">
+	<link rel="stylesheet" href="./css/header.css">
+	<link rel="stylesheet" href="./css/list.css">
+	<link rel="stylesheet" href="./css/item.css">
+	<link rel="stylesheet" href="./css/item-functions.css">
+	<link rel="stylesheet" href="./css/modals.css">
+	<!-- Icons -->
+	<link rel="icon" type="image/x-icon" href="./img/icon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/icon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/icon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./img/icon/favicon-16x16.png">
+	<link rel="manifest" href="./site.webmanifest">
+	<!-- JavaScript -->
+	<script type="module" src="index.js"></script>
+	<script async src="https://unpkg.com/pwacompat" crossOrigin="anonymous"></script>
+</head>
+
+<body>
+	<header>
+		<div class="title-and-buttons">
+			<h1 class="title">BUY_it</h1>
+			<button id="add-item">
+				<span class="material-icon">
+					add
+				</span>
+			</button>
+			<button id="help">
+				<span class="material-icon">
+					question_mark
+				</span>
+			</button>
+		</div>
+
+		<div class="tag-and-filters">
+			<div id="current-tag"></div>
+
+			<select id="filter-check" aria-label="checked filter" required>
+				<option value="" class="disabled" disabled selected>un/checked</option>
+				<option value="0">reset</option>
+				<option value="1">checked</option>
+				<option value="2">unchecked</option>
+			</select>
+
+			<select id="filter-priority" aria-label="priority filter" required>
+				<option value="" class="disabled" disabled selected>priority</option>
+				<option value="0">reset</option>
+				<option value="1">normal</option>
+				<option value="2">high</option>
+				<option value="3">highest</option>
+				</optgroup>
+			</select>
+		</div>
+	</header>
+
+	<main>
+		<ul class="list" id="list"></ul>
+	</main>
+</body>
+
+</html>

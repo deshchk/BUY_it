@@ -1,0 +1,13 @@
+/* LIST */
+.list {
+	/* reset */
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+
+	/* rest */
+	display: flex;
+	flex-direction: column;
+
+	margin-inline: auto;
+}

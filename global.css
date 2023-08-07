@@ -1,0 +1,53 @@
+:root {
+	scrollbar-width: auto;
+	--black: #101010;
+}
+
+html,
+body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	padding: 1rem;
+}
+
+
+
+/* MAIN */
+main {
+	max-width: 60ch;
+	min-height: calc(100dvh - 7.8rem);
+
+	margin-inline: auto;
+
+	padding-bottom: 10em;
+	margin-top: 5.8rem;
+}
+
+	.nothing {
+		margin: 4rem auto;
+
+		& span {
+			margin-left: .2rem;
+		}
+	}
+
+	
+
+/* P W A */
+/* ✓ Avoid Content Selection */
+.element, button, label {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* ✓ Tap Highlight color */
+button {
+    -webkit-tap-highlight-color: #ffffff;
+}
+
+link[rel="manifest"] {
+    --pwacompat-splash-font: 24px Verdana;
+}

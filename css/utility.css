@@ -1,0 +1,99 @@
+/* BOX SIZING and FONT 'ANTIALIASING' */
+* {
+	box-sizing: border-box;
+
+	/* Fonts */
+	text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+}
+
+
+
+/* SCROLLER */
+.scroll-inline {
+	/* scroll */
+	overflow-x: auto;
+	overscroll-behavior-inline: contain;
+
+	/* snap */
+	scroll-snap-type: inline mandatory;
+	scroll-snap-stop: always;
+
+	/* scrollbar */
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	& > * {
+		scroll-snap-align: start;
+	}
+}
+
+/* MIDDLE DOT */
+.middle-dot {
+	font-weight: bold;
+}
+
+
+
+/* NOTIFICATIONS */
+.notification {
+	width: max-content;
+	position: fixed;
+	bottom: 8rem;
+	left: 50%;
+	transform: translateX(-50%);
+
+	display: block;
+
+	text-align: center;
+
+	padding: 1em 1.8em;
+
+	opacity: 0;
+	animation: fade 2.5s ease 1;
+}
+
+	.notification.alert {
+		background: var(--black);
+		color: white;
+		font-size: 1rem;
+		letter-spacing: 1px;
+		word-spacing: 2px;
+	}
+
+
+
+/* ANIMATIONS */
+@keyframes fade {
+	from {opacity: 1}
+	80% {opacity: 1}
+	to {opacity: 0}
+}
+
+
+
+
+
+
+/* FIXES */
+input, button, select {
+	color: inherit
+}
+
+select::-ms-expand {
+	display: none;
+ }
+ 
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: transparent url('../img/select-arrow.svg') no-repeat 92% 50%;
+	padding-right: 1rem;
+	background-size: .6em;
+}
+
+select:invalid {
+	color: gray;
+}
