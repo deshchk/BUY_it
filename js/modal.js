@@ -102,24 +102,24 @@ export function help() {
     const dialog = document.createElement('dialog')
     dialog.id = 'help-modal'
     dialog.innerHTML = `
-        <img src="../img/icon/android-chrome-192x192.png" alt="BUY_it logo" class="logo-img">
+        <img src="./img/icon/android-chrome-192x192.png" alt="BUY_it logo" class="logo-img">
         <small class="help-version">v1.2</small>
 
         <div class="item-functions">
             <p>
                 <b>1.</b> Clicking on an item <em>checks&nbsp;it</em>. Another click unchecks.
             </p>
-            <img src="../img/item-check.png" alt="an example picture of a checked item">
+            <img src="./img/item-check.png" alt="an example picture of a checked item">
             
             <p>
                 <b>2.</b> You can <em>edit</em> and <em>delete</em> items. Just swipe them to&nbsp;the&nbsp;side (or&nbsp;use Shift&nbsp;+&nbsp;scroll) to&nbsp;reveal the functions.
             </p>
-            <img src="../img/item-functions.png" alt="an example picture of available item functions">
+            <img src="./img/item-functions.png" alt="an example picture of available item functions">
 
             <p>
                 <b>3.</b> <em>Filter</em> and show only the items you want to see using <em>tags</em>, <em>checking</em> and their <em>priority</em>.
             </p>
-            <img src="../img/filters-example.png" alt="an example picture of filtering items">
+            <img src="./img/filters-example.png" alt="an example picture of filtering items">
         </div>
 
         <small class="help-author">
